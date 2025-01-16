@@ -1,10 +1,10 @@
 # [level 0] 세로 읽기 - 181904 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181904) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181904?language=python3) 
 
 ### 성능 요약
 
-메모리: 10.3 MB, 시간: 0.33 ms
+메모리: 10.2 MB, 시간: 0.01 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 01월 16일 21:42:23
+2025년 01월 16일 21:44:30
 
 ### 문제 설명
 
