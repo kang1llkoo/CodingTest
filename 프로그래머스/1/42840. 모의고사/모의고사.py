@@ -1,12 +1,19 @@
 def solution(answers):
-    answer_types = [
-        [1,2,3,4,5],
-        [2,1,2,3,2,4,2,5],
-        [3,3,1,1,2,2,4,4,5,5]
-    ]
-    scores = [0,0,0]
-    for type_idx, ans_type in enumerate(answer_types):
-        for idx, ans in enumerate(answers):
-            if ans == ans_type[idx % len(ans_type)]:
-                scores[type_idx] += 1
-    return [idx+1 for idx, score in enumerate(scores) if score == max(scores)]
+    pattern1 = [1,2,3,4,5]
+    pattern2 = [2,1,2,3,2,4,2,5]
+    pattern3 = [3,3,1,1,2,2,4,4,5,5]
+    score = [0,0,0]
+    result = []
+    for idx, answer in enumerate(answers):
+        if answer == pattern1[idx % len(pattern1)]:
+            score[0] += 1
+        if answer == pattern2[idx % len(pattern2)]:
+            score[1] += 1
+        if answer == pattern3[idx % len(pattern3)]:
+            score[2] += 1
+    
+    for idx, s in enumerate(score):
+        if s == max(score):
+            result.append(idx+1)
+    
+    return result
