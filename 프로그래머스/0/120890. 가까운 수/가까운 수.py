@@ -1,9 +1,8 @@
 def solution(array, n):
-    array.sort()
-    answer = array[0]
-    x = abs(n - array[0])
+    closet = float('inf')
     for num in array:
-        if x > abs(n - num):
-            x = abs(n - num)
-            answer = num
-    return answer
+        if abs(n-num) < abs(n-closet):
+            closet = num
+        elif abs(n-num) == abs(n-closet):
+            closet = min(closet, num)
+    return closet
