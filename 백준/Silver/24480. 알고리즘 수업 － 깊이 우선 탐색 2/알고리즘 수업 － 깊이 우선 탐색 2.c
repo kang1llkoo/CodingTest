@@ -82,7 +82,7 @@ void sortlist(int n) {
 
         graph[i] = NULL;
         for (int j = 0; j < count; j++) {
-            insertedge(i, adj[j]);  // 수정된 부분
+            insertedge(i, adj[j]);
         }
     }
 }
@@ -96,7 +96,7 @@ void dfs(int start) {
         int node = pop(&s);
 
         if (!visited[node]) {
-            visited[node] = order++;  // 수정된 부분
+            visited[node] = order++;
 
             gnode* temp = graph[node];
             while (temp) {
